@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="bin/bootstrap-4.5.3/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="bin/style.css">
+        <title>Home</title>
+    </head>
+    <body class="bg-ultradark">
+        <div class="container">
+            <div class="row">
+                <nav class="col navbar navbar-expand-lg navbar-dark">
+                    <a class="navbar-brand" href="CMD.html">
+                        <img src="bin/image/11960.svg" width="40" height="40" alt="Site logo">
+                        Tixerand Adrien
+                    </a>         
+                </nav>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <p>Cliquer sur la commande qui vous intéresse</p>
+            </div> 
+            <div class="row">    
+                <ul class="list-unstyled">
+                    <li class="cursor" id="acti"> &lt;Projet&gt; : présentatsion des Projet finis</li> 
+                    <li class="cursor" id="contactclick">&lt;contact&gt; : pour me contacter</li>
+                    <br>
+                    <li>C:\Tixerand Adrien><span id="flashing">_</span></li>
+                </ul>
+            </div>   
+        </div>    
+
+        <div class="container" id="zone">
+            <div class="row">
+
+                <div class="col-12">
+                    <form id="contact" class="none"> 
+                        <div class="form-group">
+                            <label for="Nom">Nom et Prénom :</label>
+                            <input type="text" class="form-control" id="Nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">Téléphone :</label>
+                            <input type="number" class="form-control" id="Tel">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Mail :</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="note">Message :</label>
+                            <textarea class="form-control" id="note" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Rendre cette notation publique
+                            </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-whiteandblack">Envoyer</button>
+                    </form>
+                </div>
+
+                <div id="Copyright_text" class="col-12 none">
+                    <p>Copyright_text</p>
+                </div>
+
+
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="list-inline text-right text-white">
+                            <li class="list-inline-item">Copyright 2020 Adrien Tixerand</li>
+                            <li class="list-inline-item">&middot;</li>
+                            <li class="list-inline-item" id="Copyright"><span class="cursor">MENTIONS LÉGALES</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="bin/jquery.js"></script>
+        <script src="bin/bootstrap-4.5.3/js/bootstrap.min.js"></script>
+        <script>
+           $(document).ready(function()
+            {
+                $("#acti").click(function() 
+                {
+                    $("").show();
+                    $("").hide();
+                    $("#Copyright_text").hide();
+                    $("#contact").hide();
+                });
+                $("#presen").click(function() 
+                {
+                    $("").hide();
+                    $("#Copyright_text").hide();
+                    $("").show();
+                    $("#contact").hide();
+                });
+                $("#contactclick").click(function() 
+                {
+                    $("").hide();
+                    $("#Copyright_text").hide();
+                    $("").hide();
+                    $("#contact").show();
+                });
+                $("#Copyright").click(function() 
+                {
+                    $("#Copyright_text").show();
+                    $("").hide();
+                    $("").hide();
+                    $("#contact").hide();
+                });
+            });
+        </script>
+    </body>
+</html>
